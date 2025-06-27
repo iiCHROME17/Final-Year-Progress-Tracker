@@ -46,12 +46,15 @@
     </style>
 </head>
 <body>
-    <form class="login-box" method="post" action="/login">
-        <h2>Login</h2>
+    <form class="login-box" method="post" action="/login" th:action="@{/login}">
+        <h2 th:text="${advisorMode} ? 'Advisor Login' : 'Student Login'">Login</h2>
         <input type="email" name="email" placeholder="Email" required />
         <input type="password" name="password" placeholder="Password" required />
+        <input type="hidden" name="advisorMode" th:value="${advisorMode}" />
         <button type="submit">Login</button>
-        <a href="/advisor-login">Advisor Trying To Login?</a>
+        <a th:if="${advisorMode}" th:href="@{/login}" th:text="'Student Click Here'">Student Click Here</a>
+        <a th:unless="${advisorMode}" th:href="@{/login(advisor=true)}" th:text="'Advisor Trying To Login?'">Advisor Trying To Login?</a>
+        <div th:if="${error}" style="color:red; margin-top:1rem;" th:text="${error}"></div>
     </form>
 </body>
 </html> 

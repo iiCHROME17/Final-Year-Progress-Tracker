@@ -75,4 +75,7 @@ This project uses the Java Spring Boot framework, which provides a rapid develop
 - **Lombok**: Reduces boilerplate code (getters, setters, etc.)
 - **Spring Boot DevTools**: Enables hot reload during development
 
+### AI Usage
+This project has made use of AI tools to assist in Debugging & Documentation. This includes this README file and the javadoc comments generated for the classes and methods. AI tools have also been used to generate boilerplate code and provide suggestions for best practices in Java and Spring Boot development. The aim of this project is to understand RESTful web services, Spring Boot, and the overall software development lifecycle, rather than to create an AI-driven application, but AI tools have been leveraged to enhance productivity and code quality.
+
 All dependencies are managed via the `pom.xml` file using Maven.
