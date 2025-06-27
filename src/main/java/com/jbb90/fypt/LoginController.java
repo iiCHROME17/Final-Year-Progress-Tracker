@@ -56,7 +56,7 @@ public class LoginController {
      * @param model Spring MVC model for passing attributes to the view
      * @return redirect to dashboard on success, or login page with error on failure
      */
-    @PostMapping("/login")
+    @PostMapping("/do-login")
     public String processLogin(
             @RequestParam String email,
             @RequestParam String password,
@@ -69,6 +69,8 @@ public class LoginController {
                 .anyMatch(a -> a.getEmail().equals(email) && a.getPassword().equals(password));
         } else {
             // Check student credentials
+            System.out.println("All students in DB:");
+            studentRepository.findAll().forEach(stu -> System.out.println(stu.getEmail() + " / " + stu.getPassword()));
             success = studentRepository.findAll().stream()
                 .anyMatch(s -> s.getEmail().equals(email) && s.getPassword().equals(password));
         }

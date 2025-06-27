@@ -23,3 +23,6 @@ This log tracks my journey building the Final Year Project Tracker using Java Sp
 ---
 
 I'll continue to update this log as I make progress on the project. 
+
+### To Implement:
+-  Custom UserDetails for Student and Advisor for proper authentication.
