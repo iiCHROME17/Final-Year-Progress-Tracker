@@ -15,13 +15,14 @@ public class FyptApplication {
 	@Bean
 	public CommandLineRunner demo(StudentRepository studentRepository) {
 		return (args) -> {
-			// Create and save a student
-			Student s = new Student();
-			s.setName("Jerome");
-			s.setEmail("wc003059@student.reading.ac.uk");
-			s.setPassword("adminPassword335");
-			s.setProjectName("FYP Tracker");
+			// Create and save a student - me
+			Student s = new Student("Jerome", "wc003059@student.reading.ac.uk", 
+			"adminPassword335", "FYP Tracker");
 			studentRepository.save(s);
+
+			Student defaultStudent = new Student("admin","df@example.com",
+			"admin111","Default Project");
+			studentRepository.save(defaultStudent);
 
 			// Print all student names and project names
 			studentRepository.findAll().forEach(student -> System.out.println(student.getName() + " - " + student.getProjectName()));
