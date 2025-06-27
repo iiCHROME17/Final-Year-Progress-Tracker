@@ -29,6 +29,18 @@ public class Advisor {
      */
     public Advisor() {} // Constructor
 
+    /**
+     * Constructs a new Advisor with the given details.
+     * @param name the advisor's name
+     * @param email the advisor's email
+     * @param password the advisor's password
+     */
+    public Advisor(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
     /** @return the advisor ID */
     public Long getId() { return id; }
     /** @param id the advisor ID */

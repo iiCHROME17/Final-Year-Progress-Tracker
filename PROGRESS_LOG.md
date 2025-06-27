@@ -19,6 +19,9 @@ This log tracks my journey building the Final Year Project Tracker using Java Sp
 - I updated all related code to set and display the project name for each student.
 - The application now prints both student names and their project names to the console.
 - I generated service and controller classes for Advisor, Milestone, and Feedback, enabling REST API endpoints for CRUD operations on all main entities.
+- I added constructors for Advisor and improved the display of admin credentials at startup.
+- I implemented a login system for students and advisors, which will be expanded upon in future updates.
+- I added Javadoc documentation to all main entity classes, configuration, and application startup methods for better maintainability and understanding.
 
 ---
 
