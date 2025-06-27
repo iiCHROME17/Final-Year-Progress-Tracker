@@ -54,3 +54,25 @@ Diagram:
     Student 1---* Milestone *---1 Advisor
                        |
                        *---* Feedback (optional)
+
+## Development Pipeline
+
+This project uses the Java Spring Boot framework, which provides a rapid development pipeline for building secure, production-ready web applications. The typical workflow is:
+
+1. **Code**: Write Java code for entities, repositories, services, and controllers.
+2. **Build**: Use Maven to compile the code and manage dependencies.
+3. **Run**: Start the application with the embedded Tomcat server (`mvnw spring-boot:run`).
+4. **Test**: Use JUnit and Spring Boot Test for automated testing.
+5. **Iterate**: Hot reload with Spring Boot DevTools for fast feedback during development.
+6. **Deploy**: Package as a JAR for deployment to cloud or on-premise servers.
+
+### Main Dependencies
+- **Spring Boot Starter Web**: For building RESTful web applications
+- **Spring Boot Starter Data JPA**: For database access and ORM
+- **Spring Boot Starter Security**: For authentication and authorization
+- **Spring Boot Starter Thymeleaf**: For server-side HTML rendering
+- **H2 Database**: In-memory database for development and testing
+- **Lombok**: Reduces boilerplate code (getters, setters, etc.)
+- **Spring Boot DevTools**: Enables hot reload during development
+
+All dependencies are managed via the `pom.xml` file using Maven.
