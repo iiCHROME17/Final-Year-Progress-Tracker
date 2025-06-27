@@ -29,7 +29,7 @@ FYP Tracker is a Java Spring Boot web application designed to help students and 
 
 ### Student
 Represents a student working on a final year project. Stores personal and login information.
-- Fields: id, name, email, password, (optional: registrationNumber)
+- Fields: id, name, email, password
 
 ### Advisor
 Represents a faculty member supervising students. Stores personal and login information.
@@ -44,9 +44,9 @@ Represents a project milestone (e.g., Proposal, Report). Tracks submissions, sta
 - Fields: id, milestone, advisor, comment, date
 
 ## Relationships
-- A **Student** can submit multiple **Milestones**
-- An **Advisor** can review and approve multiple **Milestones**
-- Each **Milestone** is linked to one **Student** and one **Advisor**
+- A **Student** can submit multiple **Milestones** (1 to many relationship)
+- An **Advisor** can review and approve multiple **Milestones** (1 to many relationship)
+- Each **Milestone** is linked to one **Student** and one **Advisor** (many to one relationship)
 - Each **Milestone** can have feedback (either as a field or as multiple **Feedback** entries)
 
 Diagram:
