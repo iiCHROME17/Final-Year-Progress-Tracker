@@ -28,8 +28,8 @@ FYP Tracker is a Java Spring Boot web application designed to help students and 
 ## Entities
 
 ### Student
-Represents a student working on a final year project. Stores personal and login information.
-- Fields: id, name, email, password
+Represents a student working on a final year project. Stores personal and login information, and the name of their project.
+- Fields: id, name, email, password, projectName
 
 ### Advisor
 Represents a faculty member supervising students. Stores personal and login information.

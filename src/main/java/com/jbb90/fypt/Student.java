@@ -14,6 +14,7 @@ public class Student {
     private String name; // Name of the student
     private String email; // The student's email address
     private String password; // The student's password
+    private String projectName; // Name of the student's project
 
     public Student() {}
 
@@ -26,5 +27,7 @@ public class Student {
     public void setEmail(String email) { this.email = email; }
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
+    public String getProjectName() { return projectName; }
+    public void setProjectName(String projectName) { this.projectName = projectName; }
 
 } 
